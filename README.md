@@ -1,4 +1,24 @@
-# Turborepo starter
+## 😎 zerovodka project
+```js
+~ 2025.02.21
+
+steady
+
+만들어보고 싶은 모든 것 다 만들어보는 제 공간입니다 😆
+```
+<div align="center">
+  <img src="logo_png.png" width="400" height="400">
+
+</div>
+<br />
+
+<!-- Notion -->
+<div align="left">
+  <a href="https://granite-quince-faa.notion.site/Portfolio-1a0e8c9f1ea7806185bfce25afadbd5f">[🚗 프로젝트 구조]</a>
+</div>
+
+
+<!-- # Turborepo starter
 
 This Turborepo starter is maintained by the Turborepo core team.
 
@@ -81,4 +101,4 @@ Learn more about the power of Turborepo:
 - [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
 - [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference) -->
