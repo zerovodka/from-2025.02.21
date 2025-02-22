@@ -1,10 +1,8 @@
-## 😎 zerovodka project
+## 😎 Zerovodka project
 ```js
 ~ 2025.02.21
 
-steady
-
-만들어보고 싶은 모든 것 다 만들어보는 제 공간입니다 😆
+해보고 싶은 모든 것 다 해보는 공간입니다 😆
 ```
 <div align="center">
   <img src="logo_png.png" width="400" height="400">
@@ -14,7 +12,7 @@ steady
 
 <!-- Notion -->
 <div align="left">
-  <a href="https://granite-quince-faa.notion.site/Portfolio-1a0e8c9f1ea7806185bfce25afadbd5f">[🚗 프로젝트 구조]</a>
+  <a href="https://granite-quince-faa.notion.site/Portfolio-1a0e8c9f1ea7806185bfce25afadbd5f"><h3>👉🏻 프로젝트 구축기</h3></a>
 </div>
 
 
