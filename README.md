@@ -4,15 +4,9 @@
 
 해보고 싶은 모든 것 다 해보는 공간입니다 😆
 ```
-<div align="center">
-  <img src="logo_png.png" width="400" height="400">
-
-</div>
-<br />
-
 <!-- Notion -->
 <div align="left">
-  <a href="https://granite-quince-faa.notion.site/Portfolio-1a0e8c9f1ea7806185bfce25afadbd5f"><h3>👉🏻 프로젝트 구축기</h3></a>
+  <a href="https://granite-quince-faa.notion.site/Portfolio-1a0e8c9f1ea7806185bfce25afadbd5f">👉🏻 프로젝트 구축기</a>
 </div>
 
 
