@@ -3,7 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 
-const ThreeJs = () => {
+interface ThreejsProps {
+  isMouseHandler?: boolean;
+}
+
+const ThreeJs = ({ isMouseHandler }: ThreejsProps) => {
   const mountRef = useRef<HTMLDivElement>(null);
   const [isMouseActive, setIsMouseActive] = useState(false);
 
@@ -30,7 +34,7 @@ const ThreeJs = () => {
       // alpha: true
     });
     // renderer instance 생성과 동시에 렌더링 할 곳의 크기 설정 - 렌더링할 구역의 높이와 너비를 설정하는 방법
-    // 성능 개선 시 사용 가능능
+    // 성능 개선 시 사용 가능
     renderer.setSize(mount.clientWidth, mount.clientHeight);
     // renderer element를 HTML 문서 내에 삽입 - <canvas> 에리먼트로 renderer가 scene을 나타내는 구역역
     mount.appendChild(renderer.domElement);
@@ -108,13 +112,16 @@ const ThreeJs = () => {
       mouseY = -(clientY / innerHeight) * 2 + 1; // 마우스의 Y 위치를 -1 ~ 1 범위로 변환
       setIsMouseActive(true); // 마우스가 움직이는 상태로 변경
     };
-    window.addEventListener("mousemove", onMouseMove); // 마우스가 움직일 때 onMouseMove 함수 실행
 
     // 마우스가 화면을 벗어났을 때 호출되는 함수
     const onMouseLeave = () => {
       setIsMouseActive(false); // 마우스가 움직이지 않는 상태로 변경
     };
-    window.addEventListener("mouseleave", onMouseLeave); // 마우스가 화면을 벗어날 때 onMouseLeave 함수 실행
+
+    if (isMouseHandler) {
+      window.addEventListener("mousemove", onMouseMove); // 마우스가 움직일 때 onMouseMove 함수 실행
+      window.addEventListener("mouseleave", onMouseLeave); // 마우스가 화면을 벗어날 때 onMouseLeave 함수 실행
+    }
 
     const animate = () => {
       requestAnimationFrame(animate);
@@ -133,9 +140,11 @@ const ThreeJs = () => {
     animate();
 
     return () => {
+      if (isMouseHandler) {
+        window.removeEventListener("mousemove", onMouseMove); // 리스너 제거
+        window.removeEventListener("mouseleave", onMouseLeave); // 리스너 제거
+      }
       window.removeEventListener("resize", onResize); // 리스너 제거
-      window.removeEventListener("mousemove", onMouseMove); // 리스너 제거
-      window.removeEventListener("mouseleave", onMouseLeave); // 리스너 제거
       mount.removeChild(renderer.domElement);
     };
   }, [isMouseActive]);
