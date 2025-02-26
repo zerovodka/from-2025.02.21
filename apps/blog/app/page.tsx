@@ -1,13 +1,13 @@
 "use client";
 
-import Header from "./components/Header";
-import ThreeJs from "./components/ThreeJs";
+import Header from "~components/Header";
+import ThreeJs from "~components/ThreeJs";
 
 export default function Home() {
   return (
     <div>
       <Header />
-      <ThreeJs />
+      <ThreeJs isMouseHandler />
     </div>
   );
 }

@@ -5,7 +5,15 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "baseUrl": "./app",
+    // 모노레포 내부 상대경로는 packages와 구별
+    // @ : packages
+    // ~ : app
+    "paths": {
+      "~components/*": ["_components/*"],
+      "~public/*": ["../public/*"]
+    }
   },
   "include": [
     "**/*.ts",
@@ -14,7 +22,5 @@
     "next.config.js",
     ".next/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

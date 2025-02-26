@@ -1,6 +1,7 @@
 "use client";
 
 import styled from "styled-components";
+import { BLOG_TITLE } from "~public/constants";
 
 const HeaderStyle = styled.section`
   background: transparent;
@@ -15,7 +16,7 @@ const HeaderTitle = styled.span``;
 const Header = () => {
   return (
     <HeaderStyle>
-      <HeaderTitle>Zerovodka[blog]</HeaderTitle>
+      <HeaderTitle>{BLOG_TITLE}</HeaderTitle>
     </HeaderStyle>
   );
 };
