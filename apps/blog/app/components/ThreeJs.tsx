@@ -31,7 +31,7 @@ const ThreeJs = ({ isMouseHandler }: ThreejsProps) => {
     // renderer : 마법이 일어나는 곳
     const renderer = new THREE.WebGLRenderer({
       antialias: true,
-      // alpha: true
+      alpha: true,
     });
     // renderer instance 생성과 동시에 렌더링 할 곳의 크기 설정 - 렌더링할 구역의 높이와 너비를 설정하는 방법
     // 성능 개선 시 사용 가능
