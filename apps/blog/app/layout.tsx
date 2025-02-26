@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "globals.css";
+import { BLOG_TITLE, BLOG_DESCRIPTION } from "~public/constants";
+import StyledComponentsRegistry from "../lib/registry";
 
 export const metadata: Metadata = {
-  title: "Zerovodka[blog]",
-  description: "Jr. FE Developer Zerovodka's blog",
+  title: BLOG_TITLE,
+  description: BLOG_DESCRIPTION,
 };
 
 export default function RootLayout({
@@ -13,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      </body>
     </html>
   );
 }
