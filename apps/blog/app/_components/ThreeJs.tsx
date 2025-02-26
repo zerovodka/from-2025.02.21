@@ -1,11 +1,25 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import styled from "styled-components";
 import * as THREE from "three";
 
 interface ThreejsProps {
   isMouseHandler?: boolean;
 }
+
+const ThreeJsLayer = styled.div`
+  width: 100%;
+  height: 100%;
+`;
+const ThreeJsWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+`;
+const ThreeJsContent = styled.div`
+  width: 100%;
+  height: 100%;
+`;
 
 const ThreeJs = ({ isMouseHandler }: ThreejsProps) => {
   const mountRef = useRef<HTMLDivElement>(null);
@@ -150,13 +164,11 @@ const ThreeJs = ({ isMouseHandler }: ThreejsProps) => {
   }, [isMouseActive]);
 
   return (
-    <div
-      ref={mountRef}
-      style={{
-        width: "100dvw",
-        height: "100dvh",
-      }}
-    ></div>
+    <ThreeJsLayer>
+      <ThreeJsWrapper>
+        <ThreeJsContent ref={mountRef}></ThreeJsContent>
+      </ThreeJsWrapper>
+    </ThreeJsLayer>
   );
 };
 

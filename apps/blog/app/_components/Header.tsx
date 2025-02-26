@@ -3,12 +3,16 @@
 import styled from "styled-components";
 import { BLOG_TITLE } from "~public/constants";
 
-const HeaderStyle = styled.section`
+const HeaderStyle = styled.header`
   background: transparent;
+
+  border-bottom: 1px solid;
+  margin: 2rem;
+  top: 0;
+  left: 0;
+  right: 0;
   position: fixed;
   height: 10dvh;
-  width: 100%;
-  border-bottom: 1px solid;
 `;
 
 const HeaderTitle = styled.span``;
