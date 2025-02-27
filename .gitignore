@@ -14,7 +14,7 @@ node_modules
 
 # Next.js
 next-env.*
-next.*
+# next.*
 
 # Testing
 coverage
