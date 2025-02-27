@@ -9,8 +9,8 @@ interface ThreejsProps {
 }
 
 const ThreeJsContent = styled.div`
-  width: 100%;
-  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
 `;
 
 const ThreeJs = ({ isMouseHandler }: ThreejsProps) => {
@@ -42,6 +42,7 @@ const ThreeJs = ({ isMouseHandler }: ThreejsProps) => {
     // renderer instance 생성과 동시에 렌더링 할 곳의 크기 설정 - 렌더링할 구역의 높이와 너비를 설정하는 방법
     // 성능 개선 시 사용 가능
     renderer.setSize(mount.clientWidth, mount.clientHeight);
+    renderer.setClearColor(0xffffff);
     // renderer element를 HTML 문서 내에 삽입 - <canvas> 에리먼트로 renderer가 scene을 나타내는 구역역
     mount.appendChild(renderer.domElement);
 
@@ -155,7 +156,7 @@ const ThreeJs = ({ isMouseHandler }: ThreejsProps) => {
     };
   }, [isMouseActive]);
 
-  return <ThreeJsContent ref={mountRef}></ThreeJsContent>;
+  return <ThreeJsContent ref={mountRef} />;
 };
 
 export default ThreeJs;
