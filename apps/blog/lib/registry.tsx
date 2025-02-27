@@ -15,7 +15,7 @@ const StyledComponentsRegistry = ({
 
   useServerInsertedHTML(() => {
     const styles = styledComponentsStyleSheet.getStyleElement();
-    styledComponentsStyleSheet.instance.clearTag();
+    styledComponentsStyleSheet.instance.clearTag(); // 메모리 누수 방지 코드
     return <>{styles}</>;
   });
 

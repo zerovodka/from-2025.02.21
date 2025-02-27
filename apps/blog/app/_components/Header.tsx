@@ -1,27 +1,31 @@
 "use client";
 
 import styled from "styled-components";
-import { BLOG_TITLE } from "~public/constants";
 
-const HeaderStyle = styled.header`
+const HeaderWrap = styled.header`
   background: transparent;
-
   border-bottom: 1px solid;
-  margin: 2rem;
-  top: 0;
-  left: 0;
-  right: 0;
-  position: fixed;
-  height: 10dvh;
+  margin: 0 2rem;
+  padding: 2rem 0;
 `;
 
-const HeaderTitle = styled.span``;
+const HeaderContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+`;
 
 const Header = () => {
   return (
-    <HeaderStyle>
-      <HeaderTitle>{BLOG_TITLE}</HeaderTitle>
-    </HeaderStyle>
+    <HeaderWrap>
+      <HeaderContainer>
+        <span>Main</span>
+        <span>Main</span>
+        <span>Main</span>
+        <span>Main</span>
+      </HeaderContainer>
+    </HeaderWrap>
   );
 };
 

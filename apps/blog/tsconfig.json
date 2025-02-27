@@ -12,7 +12,8 @@
     // ~ : app
     "paths": {
       "~components/*": ["_components/*"],
-      "~public/*": ["../public/*"]
+      "~public/*": ["../public/*"],
+      "~lib/*": ["../lib/*"]
     }
   },
   "include": [
