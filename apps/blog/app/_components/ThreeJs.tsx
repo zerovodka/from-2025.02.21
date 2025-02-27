@@ -8,14 +8,6 @@ interface ThreejsProps {
   isMouseHandler?: boolean;
 }
 
-const ThreeJsLayer = styled.div`
-  width: 100%;
-  height: 100%;
-`;
-const ThreeJsWrapper = styled.div`
-  width: 100%;
-  height: 100%;
-`;
 const ThreeJsContent = styled.div`
   width: 100%;
   height: 100%;
@@ -163,13 +155,7 @@ const ThreeJs = ({ isMouseHandler }: ThreejsProps) => {
     };
   }, [isMouseActive]);
 
-  return (
-    <ThreeJsLayer>
-      <ThreeJsWrapper>
-        <ThreeJsContent ref={mountRef}></ThreeJsContent>
-      </ThreeJsWrapper>
-    </ThreeJsLayer>
-  );
+  return <ThreeJsContent ref={mountRef}></ThreeJsContent>;
 };
 
 export default ThreeJs;
