@@ -15,14 +15,12 @@ const HomeWrapper = styled.div`
 const HomeContent = styled.section`
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: hidden;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   align-self: center;
 `;
-
-const SVG = styled.svg``;
 
 export default function Home() {
   return (
