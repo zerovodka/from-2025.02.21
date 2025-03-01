@@ -20,7 +20,13 @@ const StyledComponentsRegistry = ({
     return <>{styles}</>;
   });
 
-  if (typeof window !== "undefined") return <>{children}</>;
+  if (typeof window !== "undefined")
+    return (
+      <>
+        <GlobalStyle />
+        {children}
+      </>
+    );
 
   return (
     <StyleSheetManager sheet={styledComponentsStyleSheet.instance}>
