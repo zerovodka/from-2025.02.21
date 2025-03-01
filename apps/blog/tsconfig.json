@@ -13,7 +13,7 @@
     "paths": {
       "~components/*": ["_components/*"],
       "~public/*": ["../public/*"],
-      "~lib/*": ["../lib/*"]
+      "~style/*": ["../style/*"]
     }
   },
   "include": [

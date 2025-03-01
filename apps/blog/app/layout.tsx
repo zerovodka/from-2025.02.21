@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import "globals.css";
 import { BLOG_TITLE, BLOG_DESCRIPTION } from "~public/constants";
-import StyledComponentsRegistry from "~lib/registry";
+import StyledComponentsRegistry from "~style/registry";
 
 export const metadata: Metadata = {
   title: BLOG_TITLE,
