@@ -1,5 +1,6 @@
 "use client";
 
+import { LinkButton } from "@repo/ui/button/LinkButton";
 import { NextPage } from "next";
 import Link from "next/link";
 import styled from "styled-components";
@@ -18,6 +19,10 @@ const NotFoundBox = styled.div`
   border-radius: 1rem;
   box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.1);
   font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 `;
 
 const NotFound: NextPage = () => {
@@ -25,7 +30,7 @@ const NotFound: NextPage = () => {
     <NotFoundContainer>
       <NotFoundBox>
         <p>존재하지 않는 페이지입니다</p>
-        <Link href={"/"}>메인페이지로 이동</Link>
+        <LinkButton href={"/"}>메인 페이지로 이동</LinkButton>
       </NotFoundBox>
     </NotFoundContainer>
   );
