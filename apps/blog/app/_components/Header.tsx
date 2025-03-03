@@ -19,12 +19,24 @@ const HeaderContainer = styled.div`
 
 const HeaderLeftSection = styled.div``;
 
+const HeaderRightSection = styled.div``;
+
 const HeaderLeft = () => {
   return (
     <HeaderLeftSection>
       <Link href={"/resume"}>resume</Link>
       <Link href={"/career"}>career</Link>
+      <Link href={"/post"}>posts</Link>
     </HeaderLeftSection>
+  );
+};
+
+const HeaderRight = () => {
+  return (
+    <HeaderRightSection>
+      <Link href={"https://github.com/zerovodka"}>github</Link>
+      <Link href={"/career"}>tistory</Link>
+    </HeaderRightSection>
   );
 };
 
@@ -33,6 +45,7 @@ const Header = () => {
     <HeaderWrap>
       <HeaderContainer>
         <HeaderLeft />
+        <HeaderRight />
       </HeaderContainer>
     </HeaderWrap>
   );

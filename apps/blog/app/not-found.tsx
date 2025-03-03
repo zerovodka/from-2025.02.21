@@ -2,7 +2,7 @@
 
 import { LinkButton } from "@repo/ui/button/LinkButton";
 import { NextPage } from "next";
-import Link from "next/link";
+import React from "react";
 import styled from "styled-components";
 
 const NotFoundContainer = styled.div`
