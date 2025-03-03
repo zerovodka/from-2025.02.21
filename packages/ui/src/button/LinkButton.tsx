@@ -1,23 +1,14 @@
 "use client";
 
-import { DetailedHTMLProps, ReactNode } from "react";
+import Link, { LinkProps } from "next/link";
 import styled from "styled-components";
+import { buttonStyle } from "../../style/buttonStyle";
 
-interface LinkButtonProps
-  extends Omit<
-    DetailedHTMLProps<
-      React.AnchorHTMLAttributes<HTMLAnchorElement>,
-      HTMLAnchorElement
-    >,
-    "href" | "children"
-  > {
-  href: string;
-  children: ReactNode;
+interface LinkButtonProps extends LinkProps {
+  children: React.ReactNode;
 }
 
 const LinkButtonContent = styled.a`
-  background: cornflowerblue;
-  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,22 +16,43 @@ const LinkButtonContent = styled.a`
   border-radius: 0.25rem;
   white-space: nowrap;
   cursor: pointer;
+  &:hover: {
+    background-color: red;
+  }
+`;
+
+const LinkComponent = (prop: LinkButtonProps) => {
+  const { href, children, passHref, legacyBehavior, ...rest } = prop;
+
+  return (
+    <Link href={href} passHref legacyBehavior {...rest}>
+      <LinkButtonContent>{children}</LinkButtonContent>
+    </Link>
+  );
+};
+
+const Primary = styled(LinkButtonContent)`
+  ${buttonStyle.primary}
+`;
+const Secondary = styled(LinkButtonContent)`
+  ${buttonStyle.secondary}
+`;
+const Warning = styled(LinkButtonContent)`
+  ${buttonStyle.warning}
 `;
 
 /**
  * @interface LinkButtonProps
- * @requires href : string
  * @requires children : ReactNode
  * @description
- * - a 태그 prop을 그대로 받는다
- * - href, children 값 required
+ * - Primary : 검정
+ * - Secondary : 그레이
+ * - Warning : 레드
+ * - passHref를 통해 children a 태그로 href 속성을 넘겨준다
+ * - legacyBehavior: https://nextjs.org/docs/app/api-reference/components/link#if-the-child-is-a-custom-component-that-wraps-an-a-tag
  */
-export const LinkButton = (prop: LinkButtonProps) => {
-  const { href, children, ...rest } = prop;
-
-  return (
-    <LinkButtonContent href={href} {...rest}>
-      {children}
-    </LinkButtonContent>
-  );
+export const LinkButton = {
+  Primary,
+  Secondary,
+  Warning,
 };

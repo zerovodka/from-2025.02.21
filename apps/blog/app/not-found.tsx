@@ -2,7 +2,7 @@
 
 import { LinkButton } from "@repo/ui/button/LinkButton";
 import { NextPage } from "next";
-import Link from "next/link";
+import React from "react";
 import styled from "styled-components";
 
 const NotFoundContainer = styled.div`
@@ -30,7 +30,7 @@ const NotFound: NextPage = () => {
     <NotFoundContainer>
       <NotFoundBox>
         <p>존재하지 않는 페이지입니다</p>
-        <LinkButton href={"/"}>메인 페이지로 이동</LinkButton>
+        <LinkButton.Warning href={"/"}>메인 페이지로 이동</LinkButton.Warning>
       </NotFoundBox>
     </NotFoundContainer>
   );
