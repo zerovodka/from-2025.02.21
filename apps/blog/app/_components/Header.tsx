@@ -34,7 +34,9 @@ const HeaderLeft = () => {
 const HeaderRight = () => {
   return (
     <HeaderRightSection>
-      <Link href={"https://github.com/zerovodka"}>github</Link>
+      <Link href={"https://github.com/zerovodka"} target="_blank">
+        github
+      </Link>
       <Link href={"/career"}>tistory</Link>
     </HeaderRightSection>
   );

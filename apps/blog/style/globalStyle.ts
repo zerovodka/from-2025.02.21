@@ -14,7 +14,6 @@ body, p {
 };
 
 a {
-  color: inherit;
   text-decoration: none;
 };
 
