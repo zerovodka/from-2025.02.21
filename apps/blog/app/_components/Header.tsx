@@ -1,12 +1,12 @@
 "use client";
 
-import Link from "next/link";
+import { LinkButton } from "@repo/ui/button/LinkButton";
 import styled from "styled-components";
+import { aboutConstants } from "~components/constants/about";
+import { linkConstants } from "~components/constants/link";
 
 const HeaderWrap = styled.header`
-  background: red;
-  border-bottom: 1px solid;
-  padding: 2rem 0;
+  padding: 2rem;
 `;
 
 const HeaderContainer = styled.div`
@@ -16,28 +16,43 @@ const HeaderContainer = styled.div`
   justify-content: space-between;
 `;
 
-const HeaderLeftSection = styled.div``;
-
-const HeaderRightSection = styled.div``;
+const HeaderSection = styled.div`
+  display: flex;
+  gap: 2rem;
+`;
 
 const HeaderLeft = () => {
   return (
-    <HeaderLeftSection>
-      <Link href={"/resume"}>resume</Link>
-      <Link href={"/career"}>career</Link>
-      <Link href={"/post"}>posts</Link>
-    </HeaderLeftSection>
+    <HeaderSection>
+      {Object.keys(linkConstants).map((link, idx) => {
+        return (
+          <LinkButton.Primary
+            key={`${link}_${idx}`}
+            href={linkConstants[link as keyof typeof linkConstants]}
+          >
+            {link}
+          </LinkButton.Primary>
+        );
+      })}
+    </HeaderSection>
   );
 };
 
 const HeaderRight = () => {
   return (
-    <HeaderRightSection>
-      <Link href={"https://github.com/zerovodka"} target="_blank">
-        github
-      </Link>
-      <Link href={"/career"}>tistory</Link>
-    </HeaderRightSection>
+    <HeaderSection>
+      {Object.keys(aboutConstants).map((about, idx) => {
+        return (
+          <LinkButton.Primary
+            key={`${about}_${idx}`}
+            href={aboutConstants[about as keyof typeof aboutConstants]}
+            target="_blank"
+          >
+            {about}
+          </LinkButton.Primary>
+        );
+      })}
+    </HeaderSection>
   );
 };
 

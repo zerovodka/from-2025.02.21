@@ -3,8 +3,6 @@
 import styled from "styled-components";
 import Header from "~components/Header";
 import SideBar from "~components/SideBar";
-import ThreeJs from "~components/ThreeJs";
-import LogoWhite from "~public/icon/logo_bg_white.svg";
 
 const HomeContainer = styled.div`
   display: flex;
@@ -26,6 +24,7 @@ const HomeContent = styled.section`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   align-self: center;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1) inset;
 `;
 
 export default function Home() {
@@ -34,12 +33,7 @@ export default function Home() {
       <SideBar />
       <HomeWrapper>
         <Header />
-        <HomeContent>
-          <LogoWhite width={"100%"} height={"100%"} />
-          <div></div>
-          <div></div>
-          <ThreeJs isMouseHandler />
-        </HomeContent>
+        <HomeContent></HomeContent>
       </HomeWrapper>
     </HomeContainer>
   );

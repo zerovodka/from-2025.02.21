@@ -1,5 +1,5 @@
 import { CSSProp } from "styled-components";
-import { globalColor } from "./color";
+import { globalColor } from "../../style/color";
 
 enum ButtonStyleEnum {
   primary,

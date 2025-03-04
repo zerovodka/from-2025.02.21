@@ -2,13 +2,13 @@
 
 import Link, { LinkProps } from "next/link";
 import styled from "styled-components";
-import { buttonStyle } from "../../style/buttonStyle";
+import { buttonStyle } from "./buttonStyle";
 
 interface LinkButtonProps extends LinkProps {
   children: React.ReactNode;
 }
 
-const LinkButtonContent = styled.a`
+const LinkButtonContent = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,16 +20,6 @@ const LinkButtonContent = styled.a`
     background-color: red;
   }
 `;
-
-const LinkComponent = (prop: LinkButtonProps) => {
-  const { href, children, passHref, legacyBehavior, ...rest } = prop;
-
-  return (
-    <Link href={href} passHref legacyBehavior {...rest}>
-      <LinkButtonContent>{children}</LinkButtonContent>
-    </Link>
-  );
-};
 
 const Primary = styled(LinkButtonContent)`
   ${buttonStyle.primary}
