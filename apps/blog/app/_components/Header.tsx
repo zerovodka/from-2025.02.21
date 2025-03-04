@@ -4,9 +4,8 @@ import Link from "next/link";
 import styled from "styled-components";
 
 const HeaderWrap = styled.header`
-  background: transparent;
+  background: red;
   border-bottom: 1px solid;
-  margin: 0 2rem;
   padding: 2rem 0;
 `;
 

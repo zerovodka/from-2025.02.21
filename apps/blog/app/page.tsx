@@ -2,8 +2,14 @@
 
 import styled from "styled-components";
 import Header from "~components/Header";
+import SideBar from "~components/SideBar";
 import ThreeJs from "~components/ThreeJs";
 import LogoWhite from "~public/icon/logo_bg_white.svg";
+
+const HomeContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 
 const HomeWrapper = styled.div`
   display: flex;
@@ -24,14 +30,17 @@ const HomeContent = styled.section`
 
 export default function Home() {
   return (
-    <HomeWrapper>
-      <Header />
-      <HomeContent>
-        <LogoWhite width={"100%"} height={"100%"} />
-        <div></div>
-        <div></div>
-        <ThreeJs isMouseHandler />
-      </HomeContent>
-    </HomeWrapper>
+    <HomeContainer>
+      <SideBar />
+      <HomeWrapper>
+        <Header />
+        <HomeContent>
+          <LogoWhite width={"100%"} height={"100%"} />
+          <div></div>
+          <div></div>
+          <ThreeJs isMouseHandler />
+        </HomeContent>
+      </HomeWrapper>
+    </HomeContainer>
   );
 }
