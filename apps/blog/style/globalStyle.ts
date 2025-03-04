@@ -17,5 +17,10 @@ a {
   text-decoration: none;
 };
 
+p, span {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+};
 
 `;
