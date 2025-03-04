@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/react";
 
 import { BLOG_TITLE, BLOG_DESCRIPTION } from "~public/constants";
 import StyledComponentsRegistry from "~style/registry";
@@ -22,6 +23,7 @@ export default function RootLayout({
     <html lang="en" className={font.className}>
       <body>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <Analytics />
       </body>
     </html>
   );
