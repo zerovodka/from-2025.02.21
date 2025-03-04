@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import styled from "styled-components";
-import { animation } from "~style/animation";
 
 type SideBarOpenProp = {
   $isOpen: boolean;
@@ -10,23 +9,24 @@ type SideBarOpenProp = {
 
 const SideBarContainer = styled.div<SideBarOpenProp>`
   background: skyblue;
-  width: auto;
-  animation: ${(props) =>
-    props.$isOpen ? animation.narrowToWide : animation.wideToNarrow};
+  width: ${(props) => (props.$isOpen ? "20%" : "10%")};
+  transition: width 1s ease-in-out;
 `;
 
 const SideBar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <SideBarContainer $isOpen={isOpen}>
-      <button
-        onClick={() => {
-          setIsOpen(!isOpen);
-        }}
-      >
-        {isOpen ? "닫기" : "열기"}
-      </button>
+    <SideBarContainer
+      $isOpen={isOpen}
+      onMouseOver={() => {
+        setIsOpen(true);
+      }}
+      onMouseOut={() => {
+        setIsOpen(false);
+      }}
+    >
+      <button>{isOpen ? "닫기" : "열기"}</button>
     </SideBarContainer>
   );
 };
