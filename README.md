@@ -1,14 +1,12 @@
-## 😎 Zerovodka project
+## Project | Seowoo Choi
 
 ```js
-~ 2025.02.21
-
-해보고 싶은 모든 것 다 해보는 공간입니다 😆
+2025.02.21 ~
 ```
 
 <!-- Notion -->
 <div align="left">
-  <a href="https://granite-quince-faa.notion.site/Portfolio-1a0e8c9f1ea7806185bfce25afadbd5f">👉🏻 프로젝트 구축기</a>
+  <a href="https://granite-quince-faa.notion.site/Portfolio-1a0e8c9f1ea7806185bfce25afadbd5f" target="_blank">👉🏻 프로젝트 구축기</a>
 </div>
 
 <!-- # Turborepo starter
