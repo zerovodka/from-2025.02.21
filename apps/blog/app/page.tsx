@@ -2,7 +2,6 @@
 
 import styled from "styled-components";
 import Header from "~components/Header";
-import SideBar from "~components/SideBar";
 
 const HomeContainer = styled.div`
   display: flex;
@@ -30,7 +29,6 @@ const HomeContent = styled.section`
 export default function Home() {
   return (
     <HomeContainer>
-      <SideBar />
       <HomeWrapper>
         <Header />
         <HomeContent></HomeContent>
